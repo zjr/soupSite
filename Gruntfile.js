@@ -284,7 +284,7 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'bower_components/**/*',
-            'media/{,*/}*.{webp}',
+            'media/{,*/}*.{webp,mp4,webm}',
             'fonts/*'
           ]
         }, {
