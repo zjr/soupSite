@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('BurgyApp', [
+angular.module('SoupApp', [
 	'ngCookies',
 	'ngResource',
 	'ngSanitize',
