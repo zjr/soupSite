@@ -3,6 +3,14 @@
 body
 	font-family: 'Lato', sans-serif
 	font-weight: 100
+	margin: 0 50px
+	text-align: right
+	color: white
+	line-height: 1.6
+
+h1, h2, h3, h4, h5, h6
+	font-weight: 100
+	margin: 0
 
 a
 	color: white
@@ -14,9 +22,7 @@ a
 .navContainer
 	z-index: 1
 	position: relative
-	margin: 0 50px
-	color: white
-	text-align: right
+	margin-bottom: 2rem
 
 .siteTitle
 	margin: 0
@@ -50,11 +56,25 @@ a
 			color: rgba(255, 255, 255, 0.7)
 			+rotate(-360deg)
 
+.container
+	z-index: 1
+	position: relative
+
+.pageTitle
+	display: inline-block
+	width: 33%
+	border-bottom: 1px solid
+	margin-bottom: 1rem
+
+.bodyGraph
+	display: inline-block
+	width: 50%
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8)
 
 .vidContainer
 	top: 0
 	left: 0
-	position: absolute
+	position: fixed
 	width: 100%
 	height: 100%
 	background: black
@@ -72,8 +92,8 @@ a
 .lineBg
 	top: 0
 	left: 0
-	position: absolute
+	position: fixed
 	width: 100%
 	height: 100%
-	opacity: 0.3
+	opacity: 0.4
 	background: url('/media/overlay.png')
