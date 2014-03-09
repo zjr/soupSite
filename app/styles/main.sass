@@ -62,6 +62,17 @@ a
 .container
 	z-index: 1
 	position: relative
+	&.ng-enter,
+	&.ng-leave
+		transition: all 0.25s ease-in-out
+	&.ng-enter,
+	&.ng-leave.ng-leave-active
+		opacity: 0
+		+translateX(25px)
+	&.ng-leave,
+	&.ng-enter.ng-enter-active
+		opacity: 1
+		+translateX(0)
 
 .pageTitle
 	display: inline-block
