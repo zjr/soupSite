@@ -6,7 +6,7 @@ angular.module('SoupApp')
             restrict: 'A',
             replace: true,
             scope: {
-                vidSrc: "=videoBg"
+                vidSrc: '=videoBg'
             },
             template: '<video class="vidBg" autoplay loop></video>',
             link: function postLink(scope, elem) {
@@ -25,8 +25,9 @@ angular.module('SoupApp')
 
                 function isSmallScreen(breakPoint) {
                     var breakPointDefault = 1024;
-                    var breakPoint = typeof(breakPoint) === 'undefined' ? breakPointDefault : breakPoint;
                     var winWidth = $window.innerWidth;
+
+                    breakPoint = typeof(breakPoint) === 'undefined' ? breakPointDefault : breakPoint;
 
                     if (winWidth < breakPoint) {
                         return true;
@@ -43,7 +44,7 @@ angular.module('SoupApp')
                         var sourceElem = '<source src="' + scope.vidSrc + '.' + format + '" type="video/' + format + '">';
                         elem.append(sourceElem);
                     }
-                };
+                }
 
                 (function() {
                     if(!isSmallScreen()) {
