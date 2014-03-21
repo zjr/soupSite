@@ -9,16 +9,19 @@ body
 	overflow-x: hidden
 	background-color: black
 	font-family: 'Lato', sans-serif
-	font-weight: 200
+	font-weight: 300
 	line-height: 1.6
 	color: white
 	text-align: center
 	@media #{$forLarge}
+		font-weight: 200
 		text-align: right
 
 h1, h2, h3, h4, h5, h6
-	font-weight: 200
 	margin: 0
+	font-weight: 300
+	@media #{$forLarge}
+		font-weight: 200
 
 a
 	color: white
