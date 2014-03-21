@@ -48,6 +48,8 @@ angular.module('SoupApp')
                 (function() {
                     if(!isSmallScreen()) {
                         loadSource();
+                    } else {
+                        elem.remove();
                     }
                 })();
             }
