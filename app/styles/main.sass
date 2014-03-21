@@ -1,7 +1,8 @@
 @import "compass/css3/transform"
 
-$forSmall: "only screen and ( max-width: 1199px )"
-$forLarge: "only screen and ( min-width: 1200px )"
+$largePoint: 1024
+$forSmall: "only screen and ( max-width: #{$largePoint - 1}px )"
+$forLarge: "only screen and ( min-width: #{$largePoint}px )"
 
 body
 	margin: 0 50px
@@ -9,9 +10,11 @@ body
 	background-color: black
 	font-family: 'Lato', sans-serif
 	font-weight: 200
-	text-align: right
 	line-height: 1.6
 	color: white
+	text-align: center
+	@media #{$forLarge}
+		text-align: right
 
 h1, h2, h3, h4, h5, h6
 	font-weight: 200
