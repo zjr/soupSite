@@ -34,6 +34,8 @@ a
 	line-height: 1.5
 	font-weight: 100
 
+$sLinkColor: rgba(255,255,255,0.5)
+$sLinkColorHover: rgba(255,255,255,1)
 .sLink
 	width: 25px
 	height: 25px
@@ -42,7 +44,7 @@ a
 	font-size: 16px
 	text-align: center
 	border-radius: 15px
-	border: 2px solid rgba(255,255,255,0.5)
+	border: 2px solid $sLinkColor
 	transition: all 0.2s ease-out
 	margin: 0 5px
 	&:last-child
@@ -50,14 +52,14 @@ a
 	.fa
 		display: block
 		line-height: 25px
-		color: rgba(255,255,255,0.5)
+		color: $sLinkColor
 		transition: all 0.4s ease-out
 	&:hover
 		+scale(1.5)
-		border-color: rgba(255,255,255,0.7)
+		border-color: $sLinkColorHover
 		margin: 0 10px
 		.fa
-			color: rgba(255,255,255,0.7)
+			color: $sLinkColorHover
 			+rotate(-360deg)
 
 .container
