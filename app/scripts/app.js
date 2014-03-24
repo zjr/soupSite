@@ -5,7 +5,8 @@ angular.module('SoupApp', [
 	'ngResource',
 	'ngSanitize',
 	'ngAnimate',
-	'ui.router'
+	'ui.router',
+	'akoenig.deckgrid'
 ])
 	.config(function ($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise('soup');

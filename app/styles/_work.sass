@@ -1,0 +1,26 @@
+.deckgrid[deckgrid]::before
+    // Specifies that the grid should have a maximum of 3 columns. Each column will have the classes 'column' and 'column-1-3'
+    content: '3 .column.column-1-3'
+    font-size: 0 // See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861
+    visibility: hidden
+
+.deckgrid .column
+    float: left
+
+.deckgrid .column-1-3
+    width: 33%
+    box-sizing: border-box
+    padding-right: 25px
+    &:last-child
+        padding-right: 0
+
+.work-card
+    position: relative
+    margin-bottom: 20px
+    text-align: left
+.work-card__title
+    top: 0
+    left: 0
+    position: absolute
+.work-card__image
+    width: 100%
