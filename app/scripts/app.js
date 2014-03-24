@@ -4,15 +4,18 @@ angular.module('SoupApp', [
 	'ngCookies',
 	'ngResource',
 	'ngSanitize',
-	'ngRoute',
-	'ngAnimate'
+	'ngAnimate',
+	'ui.router'
 ])
-	.config(function ($routeProvider) {
-		$routeProvider
-			.when('/about', {
-				templateUrl: 'views/about.html',
+	.config(function ($stateProvider, $urlRouterProvider) {
+		$urlRouterProvider.otherwise('soup');
+
+		$stateProvider
+			.state('soup', {
+				url: ''
 			})
-			.otherwise({
-				redirectTo: '/'
+			.state('about', {
+				url: '/about',
+				templateUrl: 'views/about.html'
 			});
 	});
