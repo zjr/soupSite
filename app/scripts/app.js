@@ -17,5 +17,9 @@ angular.module('SoupApp', [
 			.state('about', {
 				url: '/about',
 				templateUrl: 'views/about.html'
+			})
+			.state('work', {
+				url: '/work',
+				templateUrl: 'views/work.html'
 			});
 	});
