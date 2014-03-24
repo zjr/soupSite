@@ -27,7 +27,7 @@
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-		<div class="navContainer" ng-cloak>
+		<div class="navContainer" ng-controller="MainCtrl" ng-cloak>
 			<a href="#">
 				<h1 class="siteTitle">zjr.io</h1>
 			</a>
@@ -40,10 +40,10 @@
 			<a href="http://www.linkedin.com/pub/zachary-rollyson/69/587/257" class="sLink" target="_blank">
 				<i class="fa fa-linkedin"></i>
 			</a>
-			<a data-ui-sref="work" class="sLink">
+			<a data-ui-sref="work" class="sLink" data-ng-class="{ active: $state.is('work') }">
 				<i class="fa fa-briefcase"></i>
 			</a>
-			<a data-ui-sref="about" class="sLink">
+			<a data-ui-sref="about" class="sLink" data-ng-class="{ active: $state.is('about') }">
 				<i class="fa fa-question"></i>
 			</a>
 		</div>
@@ -86,8 +86,10 @@
 
 		<!-- build:js({.tmp,app}) scripts/scripts.js -->
 		<script src="scripts/app.js"></script>
+		<script src="scripts/states.js"></script>
+		<script src="scripts/controllers/main.js"></script>
+		<script src="scripts/controllers/work.js"></script>
 		<script src="scripts/directives/videobg.js"></script>
-<script src="scripts/controllers/work.js"></script>
 		<!-- endbuild -->
 </body>
 </html>

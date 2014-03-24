@@ -7,20 +7,10 @@ angular.module('SoupApp', [
 	'ngAnimate',
 	'ui.router',
 	'akoenig.deckgrid'
-])
-	.config(function ($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.otherwise('soup');
+]);
 
-		$stateProvider
-			.state('soup', {
-				url: ''
-			})
-			.state('about', {
-				url: '/about',
-				templateUrl: 'views/about.html'
-			})
-			.state('work', {
-				url: '/work',
-				templateUrl: 'views/work.html'
-			});
-	});
+angular.module('SoupApp')
+    .run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams) {
+        $rootScope.$state = $state;
+        $rootScope.$stateParams = $stateParams;
+    }]);
