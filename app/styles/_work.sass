@@ -21,27 +21,39 @@ $transVals: all 0.25s ease-in-out
     margin-bottom: 25px
     text-align: center
     overflow: hidden
-    border-radius: 4px
+    border-radius: 5px
     +transition(#{$transVals})
     &:hover
         z-index: 1
         cursor: pointer
         +scale(1.05)
-        .work-card__title
+        .work-card__details
             top: 50%
             opacity: 1
         .shadow
             background-color: rgba(0,0,0,0.6)
-.work-card__title
+.work-card__details
     top: 0
     left: 0
     z-index: 1
     position: absolute
     width: 100%
-    line-height: 100px
-    margin-top: -50px
-    +transition(#{$transVals})
+    height: 180px
+    box-sizing: border-box
+    margin-top: -90px
+    padding: 10px
     opacity: 0
+    +transition(#{$transVals})
+    .divider
+        width: 90%
+        height: 1px
+        background-color: white
+        margin: auto
+.work-card__title
+    font-family: 'IM Fell Great Primer', serif
+    font-style: italic
+    font-size: 28px
+    line-height: 2.5
 .work-card__image
     width: 100%
     display: block
