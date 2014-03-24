@@ -16,11 +16,20 @@
 
 .work-card
     position: relative
-    margin-bottom: 20px
+    margin-bottom: 25px
     text-align: left
+    overflow: hidden
+    border-radius: 3px
+    +transition(all 0.25s ease-in-out)
+    &:hover
+        z-index: 1
+        +scale(1.05)
 .work-card__title
     top: 0
     left: 0
     position: absolute
+    padding-top: 0.5em
+    padding-left: 1em
 .work-card__image
     width: 100%
+    display: block
