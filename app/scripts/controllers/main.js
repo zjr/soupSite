@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('SoupApp')
-  .controller('MainCtrl', ['$scope','$state', function ($scope, $state) {
-  	console.log($scope);
-  }]);
+	.controller('MainCtrl', function() {
+		console.log('Welcome to zjr.io!');
+	});
