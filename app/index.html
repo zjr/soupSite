@@ -3,101 +3,99 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Zachary J Rollyson</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width">
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<!-- build:css styles/vendor.css -->
-		<!-- bower:css -->
-		<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
-		<!-- endbower -->
-		<!-- endbuild -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Zachary J Rollyson</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
 
-		<link rel="shortcut icon" href="favicon.ico?v=1.0" />
-		<link href="http://fonts.googleapis.com/css?family=Lato:100,300|IM+Fell+Great+Primer:400italic" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="favicon.ico?v=1.0" />
+        <link href="http://fonts.googleapis.com/css?family=Lato:100,300|IM+Fell+Great+Primer:400italic" rel="stylesheet" type="text/css">
 
-		<!-- build:css({.tmp,app}) styles/main.css -->
-		<link rel="stylesheet" href="styles/main.css">
-		<!-- endbuild -->
-	</head>
-	<body data-ng-app="SoupApp">
-		<!--[if lt IE 7]>
-			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body data-ng-app="SoupApp" ng-controller="MainCtrl">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-		<div class="navContainer" ng-controller="MainCtrl" ng-cloak>
-			<a href="#">
-				<h1 class="siteTitle">zjr.io</h1>
-			</a>
-			<br>
-			<a href="//twitter.com/zjrollyson" class="sLink" target="_blank">
-				<i class="fa fa-twitter"></i>
-				<span class="dot-box"><span class="dot"></span></span>
-			</a>
-			<a href="//github.com/zjr" class="sLink" target="_blank">
-				<i class="fa fa-github"></i>
-				<span class="dot-box"><span class="dot"></span></span>
-			</a>
-			<a href="http://www.linkedin.com/pub/zachary-rollyson/69/587/257" class="sLink" target="_blank">
-				<i class="fa fa-linkedin"></i>
-				<span class="dot-box"><span class="dot"></span></span>
-			</a>
-			<!-- <a data-ui-sref="work" class="sLink" data-ng-class="{ active: $state.is('work') }">
-				<i class="fa fa-briefcase"></i>
-				<span class="dot-box"><span class="dot"></span></span>
-			</a> -->
-			<a data-ui-sref="about" class="sLink" data-ng-class="{ active: $state.is('about') }">
-				<i class="fa fa-question"></i>
-				<span class="dot-box"><span class="dot"></span></span>
-			</a>
-		</div>
+        <div class="navContainer" ng-cloak>
+            <a href="#">
+                <h1 class="siteTitle">zjr.io</h1>
+            </a>
+            <br>
+            <ul class="mainNav">
+                <!-- TODO: Might not be so good to have switch & repeat on the same el. -->
+                <li class="sLink"
+                    ng-class="{ active: $state.is('{{ item.url }}') }"
+                    ng-repeat="item in data.navItems"
+                    ng-switch="item.isExternal">
+                    <a ng-switch-when="true"
+                       target="_blank"
+                       ng-href="{{ item.url }}">
+                        <i class="fa fa-{{ item.icon }}"></i>
+                    </a>
+                    <a ng-switch-when="false"
+                       ui-sref="{{ item.url }}">
+                        <i class="fa fa-{{ item.icon }}"></i>
+                    </a>
+                    <span class="dot-box"><span class="dot"></span></span>
+                </li>
+            </ul>
+        </div>
 
-		<div class="container" data-ui-view></div>
+        <div class="container" data-ui-view></div>
 
-		<video data-video-bg="'media/oldSoupBlur'"></video>
+        <video data-video-bg="'media/oldSoupBlur'"></video>
 
-		<div class="lineBg"></div>
+        <div class="lineBg"></div>
 
-		<script type="text/javascript">
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-38550292-2']);
-			_gaq.push(['_setDomainName', 'zjr.io']);
-			_gaq.push(['_trackPageview']);
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-38550292-2']);
+            _gaq.push(['_setDomainName', 'zjr.io']);
+            _gaq.push(['_trackPageview']);
 
-			(function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
 
-		<!--[if lt IE 9]>
-		<script src="bower_components/es5-shim/es5-shim.js"></script>
-		<script src="bower_components/json3/lib/json3.min.js"></script>
-		<![endif]-->
+        <!--[if lt IE 9]>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/json3/lib/json3.min.js"></script>
+        <![endif]-->
 
-		<!-- build:js scripts/vendor.js -->
-		<!-- bower:js -->
-		<script src="bower_components/angular/angular.js"></script>
-		<script src="bower_components/angular-resource/angular-resource.js"></script>
-		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-		<script src="bower_components/angular-animate/angular-animate.js"></script>
-		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-		<script src="bower_components/angular-deckgrid/angular-deckgrid.js"></script>
-		<!-- endbower -->
-		<!-- endbuild -->
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-deckgrid/angular-deckgrid.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
 
-		<!-- build:js({.tmp,app}) scripts/scripts.js -->
-		<script src="scripts/app.js"></script>
-		<script src="scripts/states.js"></script>
-		<script src="scripts/controllers/main.js"></script>
-		<script src="scripts/controllers/work.js"></script>
-		<script src="scripts/directives/videobg.js"></script>
-<script src="scripts/services/nav.js"></script>
-		<!-- endbuild -->
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/states.js"></script>
+        <script src="scripts/services/Data.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/work.js"></script>
+        <script src="scripts/directives/videobg.js"></script>
+        <!-- endbuild -->
 </body>
 </html>
