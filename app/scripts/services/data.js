@@ -22,12 +22,12 @@ angular.module('SoupApp')
                 icon: 'linkedin',
                 isExternal: true
             },
-            {
-                name: 'Work',
-                url: 'work',
-                icon: 'briefcase',
-                isExternal: false
-            },
+            // {
+            //     name: 'Work',
+            //     url: 'work',
+            //     icon: 'briefcase',
+            //     isExternal: false
+            // },
             {
                 name: 'About',
                 url: 'about',
