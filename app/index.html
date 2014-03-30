@@ -28,30 +28,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="navContainer" ng-cloak>
-            <a href="#">
-                <h1 class="siteTitle">zjr.io</h1>
-            </a>
-            <br>
-            <ul class="mainNav">
-                <!-- TODO: Might not be so good to have switch & repeat on the same el. -->
-                <li class="sLink"
-                    ng-class="{ active: $state.is('{{ item.url }}') }"
-                    ng-repeat="item in data.navItems"
-                    ng-switch="item.isExternal">
-                    <a ng-switch-when="true"
-                       target="_blank"
-                       ng-href="{{ item.url }}">
-                        <i class="fa fa-{{ item.icon }}"></i>
-                    </a>
-                    <a ng-switch-when="false"
-                       ui-sref="{{ item.url }}">
-                        <i class="fa fa-{{ item.icon }}"></i>
-                    </a>
-                    <span class="dot-box"><span class="dot"></span></span>
-                </li>
-            </ul>
-        </div>
+        <div class="navContainer" ui-view="navigation"></div>
 
         <div class="container" data-ui-view></div>
 
