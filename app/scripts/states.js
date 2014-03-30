@@ -9,12 +9,7 @@ angular.module('SoupApp')
     .config(['$stateProvider', function($stateProvider) {
         $stateProvider
             .state('home', {
-                url: '/home',
-                views: {
-                    'navigation': {
-                        templateUrl: 'views/navigation.html'
-                    }
-                }
+                url: '/home'
             })
             .state('about', {
                 url: '/about',
