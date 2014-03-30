@@ -1,6 +1,6 @@
 @import "compass/css3/transition"
 @import "compass/css3/transform"
-@import "compass/utilities/lists"
+@import "compass/typography/lists"
 
 $largePoint: 1024
 $forSmall: "only screen and ( max-width: #{$largePoint - 1}px )"
@@ -45,33 +45,35 @@ a
     margin: 0
     display: inline
     font-size: 82px
-    line-height: 1.5
+    line-height: 1.4
     font-weight: 100
 
 .mainNav
     +inline-block-list
     display: inline
+    margin-left: -3px // BS centering
     $sLinkColor: rgba(255,255,255,0.7)
     $sLinkColorHover: rgba(255,255,255,0.9)
+    $sLinkSize: 38px
     .sLink
         position: relative
-        width: 25px
-        height: 25px
+        width: $sLinkSize
+        height: $sLinkSize
         border: 2px solid $sLinkColor
-        border-radius: 15px
-        margin: 0 5px
+        border-radius: 25px
         color: black
-        font-size: 16px
+        font-size: 24px
         text-align: center
         cursor: pointer
         transition: all 0.2s ease-out
+        +transform(scale(0.66))
         a
             z-index: 1
             position: relative
             display: block
         &:hover,
         &.active
-            +scale(1.5)
+            +scale(1)
             border-color: $sLinkColorHover
             margin: 0 10px
             .fa
@@ -79,7 +81,7 @@ a
                 +rotate(-360deg)
     .fa
         display: block
-        line-height: 25px
+        line-height: $sLinkSize
         color: $sLinkColor
         transition: all 0.4s ease-out
 
@@ -99,7 +101,7 @@ a
         opacity: 1
         animation-play-state: running
 .dot
-    top: 3px
+    top: 8px
     left: 0
     z-index: -1
     position: absolute
@@ -108,7 +110,7 @@ a
     display: block
     border-radius: 5px
     background-color: white
-    box-shadow: 0 0 5px white
+    box-shadow: 0 0 10px 2px white
 @keyframes spin
     0%
         +transform(rotate(0))
