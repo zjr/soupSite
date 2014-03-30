@@ -111,11 +111,18 @@ a
     border-radius: 5px
     background-color: white
     box-shadow: 0 0 10px 2px white
+    animation: pulse 2s 0.5s infinite ease-in-out
+    animation-play-state: paused
+    li:hover &
+        animation-play-state: running
 @keyframes spin
     0%
         +transform(rotate(0))
     100%
         +transform(rotate(1turn))
+@keyframes pulse
+    50%
+        box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.3)
 
 .container
     z-index: 1
