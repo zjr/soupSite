@@ -85,6 +85,22 @@ a
         color: $sLinkColor
         transition: all 0.4s ease-out
 
+.linkTitle
+    top: 42px
+    left: 50%
+    position: absolute
+    color: white
+    font-size: 12px
+    font-weight: 400
+    text-align: center
+    opacity: 0
+    +transform(translate(-50%, 20px))
+    transition: all 0.3s ease-in-out
+    .sLink.active &,
+    .sLink:hover &
+        opacity: 1
+        +transform(translate(-50%, 0))
+
 .dot-box
     top: 0
     left: 0
@@ -97,7 +113,7 @@ a
     opacity: 0
     animation: spin 2.5s infinite linear
     animation-play-state: paused
-    li:hover &
+    .sLink:hover &
         opacity: 1
         animation-play-state: running
 .dot
