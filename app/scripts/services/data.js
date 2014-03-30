@@ -5,6 +5,18 @@ angular.module('SoupApp')
         var Data = {};
         Data.navItems = [
             {
+                name: 'About',
+                url: 'soup.about',
+                icon: 'info',
+                isExternal: false
+            },
+            // {
+            //     name: 'Work',
+            //     url: 'soup.work',
+            //     icon: 'briefcase',
+            //     isExternal: false
+            // },
+            {
                 name: 'Twitter',
                 url: '//twitter.com/zjrollyson',
                 icon: 'twitter',
@@ -21,18 +33,6 @@ angular.module('SoupApp')
                 url: '//linkedin.com/pub/zachary-rollyson/69/587/257',
                 icon: 'linkedin',
                 isExternal: true
-            },
-            // {
-            //     name: 'Work',
-            //     url: 'work',
-            //     icon: 'briefcase',
-            //     isExternal: false
-            // },
-            {
-                name: 'About',
-                url: 'about',
-                icon: 'question',
-                isExternal: false
             }
         ];
         return Data;

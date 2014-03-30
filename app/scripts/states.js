@@ -8,20 +8,32 @@ angular.module('SoupApp')
 angular.module('SoupApp')
     .config(['$stateProvider', function($stateProvider) {
         $stateProvider
-            .state('home', {
-                url: '/home',
+            .state('soup', {
+                abstract: true,
+                url: '/',
                 views: {
                     'navigation': {
                         templateUrl: 'views/navigation.html'
                     }
                 }
             })
-            .state('about', {
-                url: '/about',
-                templateUrl: 'views/about.html'
+            .state('soup.home', {
+                url: 'home',
             })
-            .state('work', {
-                url: '/work',
-                templateUrl: 'views/work.html'
+            .state('soup.about', {
+                url: 'about',
+                views: {
+                    'main@': {
+                        templateUrl: 'views/about.html'
+                    }
+                }
+            })
+            .state('soup.work', {
+                url: 'work',
+                views: {
+                    'main@': {
+                        templateUrl: 'views/work.html'
+                    }
+                }
             });
     }]);
