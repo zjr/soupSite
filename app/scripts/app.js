@@ -14,3 +14,15 @@ angular.module('SoupApp')
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
     }]);
+
+angular.module('SoupApp')
+    .factory('LoDash', function($window){
+        var _ = $window._;
+
+        return _;
+    });
+
+angular.module('SoupApp')
+    .factory('_', function(LoDash){
+        return LoDash;
+    });
