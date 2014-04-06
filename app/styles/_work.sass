@@ -28,30 +28,35 @@ $transVals: all 0.25s ease-in-out
         cursor: pointer
         +scale(1.05)
         .work-card__details
-            top: 50%
             opacity: 1
         .shadow
             background-color: rgba(0,0,0,0.6)
+        .work-card__title,
+        .btn
+            +translateY(0)
+
 .work-card__details
-    top: 0
+    top: 50%
     left: 0
     z-index: 1
     position: absolute
     width: 100%
-    height: 180px
     box-sizing: border-box
-    margin-top: -90px
     padding: 10px
     opacity: 0
+    +translateY(-50%)
     +transition(#{$transVals})
-    .divider
-        width: 90%
-        height: 1px
-        background-color: white
-        margin: auto
 .work-card__title
+    margin-bottom: 30px
     font-size: 28px
-    line-height: 2.5
+    +translateY(-150%)
+    + .btn
+        display: inline-block
+        +translateY(150%)
+.work-card__title,
+.work-card__title + .btn
+    text-align: cente-r
+    +transition(#{$transVals})
 .work-card__image
     width: 100%
     display: block
