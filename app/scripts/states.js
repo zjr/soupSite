@@ -35,5 +35,13 @@ angular.module('SoupApp')
                         templateUrl: 'views/work.html'
                     }
                 }
+            })
+            .state('soup.work.detail', {
+                url: '/:id',
+                views: {
+                    'work-detail': {
+                        templateUrl: 'views/partials/work.detail.html'
+                    }
+                }
             });
     }]);

@@ -5,7 +5,7 @@
 <ul class="mainNav">
     <!-- TODO: Might not be so good to have switch & repeat on the same el. -->
     <li class="sLink"
-        ng-class="{ active: $state.is('{{ item.url }}') }"
+        ng-class="{ active: $state.includes('{{ item.url }}.**') }"
         ng-repeat="item in data.navItems"
         ng-switch="item.isExternal">
         <a ng-switch-when="true"

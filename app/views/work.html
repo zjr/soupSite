@@ -1,6 +1,11 @@
 <div data-ng-controller="WorkCtrl">
-    <div class="deckgrid"
-         deckgrid
+    <div deckgrid
+         class="deckgrid"
+         ng-class="{ unfocus: $state.is('soup.work.detail') }"
          source="data.workItems"
          cardTemplate="views/partials/workCard.html"></div>
+    <div class="work-detail"
+         ui-view="work-detail"
+         ng-show="$state.is('soup.work.detail')"></div>
 </div>
+

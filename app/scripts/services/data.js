@@ -11,12 +11,12 @@ angular.module('SoupApp')
                 icon: 'info',
                 isExternal: false
             },
-            // {
-            //     name: 'Work',
-            //     url: 'soup.work',
-            //     icon: 'briefcase',
-            //     isExternal: false
-            // },
+            {
+                name: 'Work',
+                url: 'soup.work',
+                icon: 'briefcase',
+                isExternal: false
+            },
             {
                 name: 'Twitter',
                 url: '//twitter.com/zjrollyson',
