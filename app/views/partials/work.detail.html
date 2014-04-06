@@ -1,4 +1,11 @@
 <div class="modal modal-work">
-    <h2>Some work detail! {{ $stateParams.id }}</h2>
+    <div class="modal-image" style="background-image: url({{ item.src }});"></div>
+    <div class="modal-content">
+        <h2 class="modal-title">{{ item.title }}</h2>
+        <p class="modal-text">{{ item.desc }}</p>
+    </div>
+    <div class="modal-close" ng-click="$state.go('soup.work')">
+        <i class="fa fa-times"></i>
+    </div>
 </div>
 <div class="modal-backdrop" ng-click="$state.go('soup.work')"></div>

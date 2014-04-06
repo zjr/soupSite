@@ -40,7 +40,11 @@ angular.module('SoupApp')
                 url: '/:id',
                 views: {
                     'work-detail': {
-                        templateUrl: 'views/partials/work.detail.html'
+                        templateUrl: 'views/partials/work.detail.html',
+                        controller: function($scope, $stateParams, _, Data) {
+                            var data = Data;
+                            $scope.item = _.find(data.workItems, { id: $stateParams.id });
+                        }
                     }
                 }
             });
