@@ -6,3 +6,11 @@
 <div class="modal-close" ng-click="closeModal()">
     <i class="fa fa-times"></i>
 </div>
+<a style="position: absolute; top: 40%; left: -90px"
+   class="btn"
+   ng-if="!firstItem"
+   ui-sref="soup.work.detail({ id: item.id - 1})">Prev</a>
+<a style="position: absolute; top: 40%; right: -90px"
+   class="btn"
+   ng-if="!lastItem"
+   ui-sref="soup.work.detail({ id: item.id + 1})">Next</a>
