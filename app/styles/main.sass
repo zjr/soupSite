@@ -209,14 +209,31 @@ a
     &:hover
         background-color: rgba($goluptiousGreen, 0.8)
 
-.modal
+.modal-container
     top: 50%
     left: 50%
     z-index: 1
     position: fixed
     width: 50%
     height: 50%
+    &.ng-hide-add,
+    &.ng-hide-remove
+        display: block !important
+        +transition(all 0.7s ease-in-out)
+    &.ng-hide-remove,
+    &.ng-hide-add-active
+        opacity: 0
+        +translateY(-150%)
+    &.ng-hide-add
+    &.ng-hide-remove-active
+        opacity: 1
+        +translateY(0)
+
+.modal
+    width: 100%
+    height: 100%
     padding: 30px
+    box-sizing: border-box
     border: 1px solid white
     border-radius: 5px
 
@@ -259,5 +276,15 @@ a
     height: 100%
     width: 100%
     background: rgba(black, 0.4)
+    &.ng-hide-add,
+    &.ng-hide-remove
+        display: block !important
+        +transition(all 1s ease-in-out)
+    &.ng-hide-remove,
+    &.ng-hide-add.ng-hide-add-active
+        opacity: 0
+    &.ng-hide-add,
+    &.ng-hide-remove.ng-hide-remove-active
+        opacity: 1
 
 @import work

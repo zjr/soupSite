@@ -4,7 +4,13 @@
          ng-class="{ unfocus: $state.is('soup.work.detail') }"
          source="data.workItems"
          cardTemplate="views/partials/workCard.html"></div>
-    <div class="work-detail"
-         ui-view="work-detail"></div>
+    <div class="modal-container"
+         ng-show="$state.is('soup.work.detail')"
+         sp-center>
+        <div class="modal" ui-view="work-detail"></div>
+    </div>
+    <div class="modal-backdrop"
+         ng-show="$state.is('soup.work.detail')"
+         ng-click="closeModal()"></div>
 </div>
 
