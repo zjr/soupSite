@@ -221,11 +221,11 @@ a
         display: block !important
         +transition(all 0.7s ease-in-out)
     &.ng-hide-remove,
-    &.ng-hide-add-active
+    &.ng-hide-add.ng-hide-add-active
         opacity: 0
         +translateY(-150%)
-    &.ng-hide-add
-    &.ng-hide-remove-active
+    &.ng-hide-add,
+    &.ng-hide-remove.ng-hide-remove-active
         opacity: 1
         +translateY(0)
 
