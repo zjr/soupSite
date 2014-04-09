@@ -212,21 +212,25 @@ a
 .modal-container
     top: 50%
     left: 50%
-    z-index: 1
+    z-index: 2
     position: fixed
     width: 50%
     height: 50%
+    +translateZ(0)
+    opacity: 1
     &.ng-hide-add,
     &.ng-hide-remove
         display: block !important
-        +transition(all 0.8s ease-in-out)
+        +transition(all 0.7s ease-in-out)
     &.ng-hide-remove,
     &.ng-hide-add.ng-hide-add-active
         opacity: 0
+        z-index: 3
         +translateY(-150%)
     &.ng-hide-add,
     &.ng-hide-remove.ng-hide-remove-active
         opacity: 1
+        z-index: 3
         +translateY(0)
 
 .modal
