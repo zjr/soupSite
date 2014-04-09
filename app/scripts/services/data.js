@@ -39,63 +39,63 @@ angular.module('SoupApp')
 
         Data.workItems = [
             {
-                id: 'p1',
+                id: 1,
                 'title': 'Development',
                 src: 'http://lorempixel.com/200/200/'
             },
             {
-                id: 'p2',
+                id: 2,
                 'title': 'Design & Development',
                 src: 'http://lorempixel.com/300/500/',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, repudiandae.'
             },
             {
-                id: 'p3',
+                id: 3,
                 'title': 'Photography',
                 src: 'http://lorempixel.com/800/600/nightlife'
             },
             {
-                id: 'pX',
+                id: 4,
                 'title': 'Design',
                 src: 'http://lorempixel.com/220/180'
             },
             {
-                id: 'pX',
+                id: 5,
                 'title': 'Some Title',
                 src: 'http://lorempixel.com/400/400'
             },
             {
-                id: 'pX',
+                id: 6,
                 'title': 'Some Title',
                 src: 'http://lorempixel.com/284/445'
             },
             {
-                id: 'pX',
+                id: 7,
                 'title': 'Some Title',
                 src: 'http://lorempixel.com/235/322'
             },
             {
-                id: 'pX',
+                id: 8,
                 'title': 'Some Title',
                 src: 'http://lorempixel.com/683/534'
             },
             {
-                id: 'pX',
+                id: 9,
                 'title': 'Some Title',
                 src: 'http://lorempixel.com/1000/720'
             },
             {
-                id: 'pX',
+                id: 10,
                 'title': 'Some Title',
                 src: 'http://lorempixel.com/289/300'
             },
             {
-                id: 'pX',
+                id: 11,
                 'title': 'Some Title',
                 src: 'http://lorempixel.com/750/600'
             },
             {
-                id: 'pX',
+                id: 12,
                 'title': 'Some Title',
                 src: 'http://lorempixel.com/683/734'
             }

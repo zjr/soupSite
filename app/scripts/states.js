@@ -43,7 +43,11 @@ angular.module('SoupApp')
                         templateUrl: 'views/partials/work.detail.html',
                         controller: function($scope, $stateParams, _, Data) {
                             var data = Data;
-                            $scope.item = _.find(data.workItems, { id: $stateParams.id });
+                            var itemId = parseInt($stateParams.id);
+
+                            $scope.item = _.find(data.workItems, { id: itemId });
+                            $scope.firstItem = (itemId === 1);
+                            $scope.lastItem = (itemId === data.workItems.length);
                         }
                     }
                 }
