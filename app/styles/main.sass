@@ -244,6 +244,26 @@ a
     background-color: rgba(black, 0.4)
     border: 1px solid white
     border-radius: 5px
+    &.ng-leave,
+    &.ng-enter
+        top: 0
+        left: 0
+        position: absolute
+        +transition(all 0.7s ease-in-out)
+    &.ng-enter
+        transition-delay: 0.7s
+    &.ng-leave,
+    &.ng-enter.ng-enter-active
+        opacity: 1
+    &.ng-enter,
+    &.ng-leave.ng-leave-active
+        opacity: 0
+    &.ng-leave.ng-leave-active
+        +scale(0.5)
+    &.ng-enter
+        +scale(1.5)
+    &.ng-enter-active
+        +scale(1)
 
 .modal-image
     top: 0
