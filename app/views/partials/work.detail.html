@@ -7,11 +7,13 @@
     <i class="fa fa-times"></i>
 </div>
 <!-- TODO: Replace with "Start" or "End" btns rather than accidentally clicking back into the overview -->
-<a style="position: absolute; top: 40%; left: -90px"
-   class="btn"
+<a class="modalCycleBtn left"
    ng-if="!firstItem"
-   ui-sref="soup.work.detail({ id: item.id - 1})">Prev</a>
-<a style="position: absolute; top: 40%; right: -90px"
-   class="btn"
+   ui-sref="soup.work.detail({ id: item.id - 1})">
+    <i class="fa fa-chevron-left fa-2x"></i>
+</a>
+<a class="modalCycleBtn right"
    ng-if="!lastItem"
-   ui-sref="soup.work.detail({ id: item.id + 1})">Next</a>
+   ui-sref="soup.work.detail({ id: item.id + 1})">
+    <i class="fa fa-chevron-right fa-2x"></i>
+</a>

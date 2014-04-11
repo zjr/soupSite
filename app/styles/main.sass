@@ -249,9 +249,9 @@ a
         top: 0
         left: 0
         position: absolute
-        +transition(all 0.7s ease-in-out)
+        +transition(all 0.5s ease-in)
     &.ng-enter
-        transition-delay: 0.7s
+        transition-delay: 0.4s
     &.ng-leave,
     &.ng-enter.ng-enter-active
         opacity: 1
@@ -314,5 +314,19 @@ a
     &.ng-hide-add,
     &.ng-hide-remove.ng-hide-remove-active
         opacity: 1
+
+.modalCycleBtn
+    top: 46%
+    position: absolute
+    color: rgba(white, 0.8)
+    +scale(0.7)
+    +transition(all 0.3s ease-in-out)
+    &:hover
+        color: white
+        +scale(1)
+    &.left
+        left: -50px
+    &.right
+        right: -50px
 
 @import work
