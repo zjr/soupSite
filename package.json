@@ -42,7 +42,7 @@
 		"requirejs": "^2.3.6",
 		"time-grunt": "^2.0.0",
         "autoprefixer-core": "^5.2.1",
-        "grunt-angular-templates": "^0.5.7",
+        "grunt-angular-templates": "^1.2.0",
         "grunt-filerev": "^2.1.2",
         "grunt-google-cdn": "^0.4.3",
         "grunt-jscs": "^1.8.0"
